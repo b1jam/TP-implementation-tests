@@ -19,9 +19,7 @@ export default function StaticSection({screenSize, sectionName, dataObject}) {
                   className={`card__default ${sectionName}__card`}>
                   <div 
                     className={`card__image ${sectionName}__image`}>
-                    <div className="image-container">
-                      <TwicImg src={`${sectionName}/${imageName}`}></TwicImg>
-                    </div>
+                      <TwicImg src={`${sectionName}/${imageName}`} mode="cover" ratio="1/0.5719"></TwicImg>
                   </div>
                     <div className={item.text !== "" ? "card__title bold" : "card__title"}>{item.title}</div>
                   {

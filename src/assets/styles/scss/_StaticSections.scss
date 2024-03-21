@@ -21,7 +21,7 @@
         width: 100%;
         @include flex(column, center, center);
         .card__image {
-            height: 100%;
+            height: auto;
             width: 100%;
             position: relative;
         }
