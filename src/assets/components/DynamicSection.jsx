@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Selector from "./Selector";
-import { TwicBackground } from "@twicpics/components/react";
+import { TwicBackground, TwicImg } from "@twicpics/components/react";
 
 
 export default function DynamicSection({screenSize, sectionName, item, elementState, setElementState, activeElement, setActiveElement}) {
@@ -10,7 +10,7 @@ export default function DynamicSection({screenSize, sectionName, item, elementSt
             key={`${sectionName}__${item.id}`}
             className={`dynamic__section ${sectionName} ${sectionName}__${item.id}`}
         >
-            <TwicBackground src={`${sectionName}/${imageName}`}></TwicBackground>
+            <TwicImg src={`${sectionName}/${imageName}`} mode="cover"></TwicImg>
             <h1 className={`${sectionName}__title title`}>{item.title}</h1>
             <p className={`${sectionName}__text text`}>{item.text}</p>
             <div className="button__row">
