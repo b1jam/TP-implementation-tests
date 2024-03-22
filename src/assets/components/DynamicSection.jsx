@@ -8,9 +8,11 @@ export default function DynamicSection({screenSize, sectionName, item, elementSt
     return (
         <div 
             key={`${sectionName}__${item.id}`}
-            className={`dynamic__section ${sectionName} ${sectionName}__${item.id}`}
+            className={`dynamic__section ${sectionName}__${item.id}`}
         >
-            <TwicImg src={`${sectionName}/${imageName}`} mode="cover"></TwicImg>
+            <div class={`image-container ${sectionName}`}>
+                <TwicImg src={`${sectionName}/${imageName}`} mode="cover"></TwicImg>
+            </div>
             <h1 className={`${sectionName}__title title`}>{item.title}</h1>
             <p className={`${sectionName}__text text`}>{item.text}</p>
             <div className="button__row">
